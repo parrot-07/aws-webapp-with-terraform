@@ -11,5 +11,5 @@ variable "key_name" {
 }
 
 variable "ami_id" {
-  description = "Amazon linux ami ID"
+  description = "Ubuntu ami ID"
 }
