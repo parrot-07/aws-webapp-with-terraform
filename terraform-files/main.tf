@@ -32,7 +32,8 @@ resource "aws_instance" "nginx_server" {
   user_data = <<-EOF
               #!/bin/bash
               apt update -y
-              amazon-linux-extras install nginx1 -y
+              apt upgrade -y
+              apt install nginx -y
               systemctl start nginx
               systemctl enable nginx
               echo "<h1> Hello from Terrafor EC2 + nginx </h1>" > /usr/share/nginx/html/index.html 
